@@ -40,4 +40,9 @@ public class WeekDaysHandler {
         }
         return null; 
     }
+
+    public boolean dayExistsInTheList (String day){
+        return days.contains(day);
+    }
+
 }

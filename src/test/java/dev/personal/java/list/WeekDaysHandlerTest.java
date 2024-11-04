@@ -55,4 +55,13 @@ public class WeekDaysHandlerTest {
 
 
     }
+
+    @Test 
+    void testDayExistInTheList (){
+        WeekDaysHandler weekDaysHandler = new WeekDaysHandler();
+        assertThat(weekDaysHandler.dayExistsInTheList("Sunday"), is(true));
+        assertThat(weekDaysHandler.dayExistsInTheList("Wednesday"), is(true));
+        assertThat(weekDaysHandler.dayExistsInTheList("Day"), is(false));
+    }
+
 }
