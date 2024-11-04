@@ -31,4 +31,14 @@ public class WeekDaysHandlerTest {
         WeekDaysHandler weekDaysHandler = new WeekDaysHandler();
         assertThat(weekDaysHandler.sizeOfList(), is(7));
     }
+
+    @Test 
+    void testDeleteDay (){
+        WeekDaysHandler weekDaysHandler = new WeekDaysHandler();
+
+        assertThat(weekDaysHandler.getDays().contains("Monday"), is(true));
+        weekDaysHandler.deleteDay("Monday"); 
+        assertThat(weekDaysHandler.getDays().contains("Monday"), is(false));
+        assertThat(weekDaysHandler.sizeOfList(), is(6));
+    }
 }
