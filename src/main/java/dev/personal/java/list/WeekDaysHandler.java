@@ -34,4 +34,10 @@ public class WeekDaysHandler {
         days.remove(day);
     }
     
+    public String requestDay(int index) {
+        if (index >= 0 && index < days.size()) {
+            return days.get(index); 
+        }
+        return null; 
+    }
 }
