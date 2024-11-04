@@ -26,5 +26,9 @@ public class WeekDaysHandler {
         return new ArrayList<>(days);
     }
 
+    public int sizeOfList(){
+        return days.size(); 
+    }
+
     
 }

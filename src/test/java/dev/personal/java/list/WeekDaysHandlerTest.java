@@ -25,4 +25,10 @@ public class WeekDaysHandlerTest {
         "Saturday",
         "Sunday"));
     }
+
+    @Test
+    void sizeOfList() {
+        WeekDaysHandler weekDaysHandler = new WeekDaysHandler();
+        assertThat(weekDaysHandler.sizeOfList(), is(7));
+    }
 }
