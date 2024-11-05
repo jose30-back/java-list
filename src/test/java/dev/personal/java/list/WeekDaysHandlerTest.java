@@ -5,6 +5,8 @@ import static org.hamcrest.Matchers.contains;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.nullValue;
 
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 
 public class WeekDaysHandlerTest {
@@ -62,6 +64,23 @@ public class WeekDaysHandlerTest {
         assertThat(weekDaysHandler.dayExistsInTheList("Sunday"), is(true));
         assertThat(weekDaysHandler.dayExistsInTheList("Wednesday"), is(true));
         assertThat(weekDaysHandler.dayExistsInTheList("Day"), is(false));
+    }
+
+    @Test 
+    void testSortListAlphabetically(){
+        WeekDaysHandler weekDaysHandler = new WeekDaysHandler();
+
+        weekDaysHandler.sortListAlphabetically(); 
+        assertThat(weekDaysHandler.getDays(), contains(
+            "Friday",
+            "Monday", 
+            "Saturday",
+            "Sunday",
+            "Thursday",
+            "Tuesday",
+            "Wednesday" 
+        ));
+
     }
 
 }

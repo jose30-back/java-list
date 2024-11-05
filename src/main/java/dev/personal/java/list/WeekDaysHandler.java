@@ -1,6 +1,7 @@
 package dev.personal.java.list;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class WeekDaysHandler {
@@ -43,6 +44,10 @@ public class WeekDaysHandler {
 
     public boolean dayExistsInTheList (String day){
         return days.contains(day);
+    }
+
+    public void sortListAlphabetically(){
+        Collections.sort(days);
     }
 
 }
