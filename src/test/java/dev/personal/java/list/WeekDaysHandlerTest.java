@@ -2,6 +2,7 @@ package dev.personal.java.list;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.contains;
+import static org.hamcrest.Matchers.empty;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.nullValue;
 
@@ -81,6 +82,14 @@ public class WeekDaysHandlerTest {
             "Wednesday" 
         ));
 
+    }
+
+    @Test
+    void testEmptyList (){
+        WeekDaysHandler weekDaysHandler = new WeekDaysHandler(); 
+
+        weekDaysHandler.emptyList();
+        assertThat(weekDaysHandler.getDays().isEmpty(), is(true));
     }
 
 }

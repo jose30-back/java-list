@@ -50,4 +50,8 @@ public class WeekDaysHandler {
         Collections.sort(days);
     }
 
+    public void emptyList() {
+        days.clear();
+    }
+
 }
